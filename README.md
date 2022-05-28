@@ -2,10 +2,6 @@
 Trabalho de Testes de Software.
 
 ![CI/CD](https://github.com/clapscofield/photoGalleryProject/workflows/CI/CD/badge.svg)
-- [![visual_studio](./src/visual_studio.svg)](https://badges.aleen42.com/src/visual_studio.svg) A badge for the Visual Studio IDE
-- [![jest](./src/jest_1.svg)](https://badges.aleen42.com/src/jest_1.svg) A badge used for projects using [Jest](https://github.com/facebook/jest) for testing JavaScript.
-- [![node](./src/node.svg)](https://badges.aleen42.com/src/node.svg) A badge used for projects built with Node.js
-- [![github](./src/github.svg)](https://badges.aleen42.com/src/github.svg) A badge used for GitHub repositories
 
 ## Grupo:
 Clarisse Scofield - 2018054699
