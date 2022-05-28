@@ -32,32 +32,23 @@ export default function SearchPhotos() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Procure suas fotos</h1>
-            <p className="font13">
-              A sua fonte de imagens gratuitas
-              <br />
-              Desenvolvido por alunos criativos
+            <h1 className="font40 extraBold" style={{ paddingTop: "40px" }}>Procure suas fotos</h1>
+            <p className="font15">
+              A sua fonte de imagens gratuitas • Desenvolvido por alunos criativos
             </p>
           </HeaderInfo>
-      <form className="form" onSubmit={searchPhotos}>
-        {" "}
-        <label className="label" htmlFor="query">
-          {" "}
-          📷
-        </label>
-        <input
-          type="text"
-          name="query"
-          className="input"
-          placeholder={`Try "dog" or "apple"`}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button type="submit" className="button">
-          Search
-        </button>
-      </form>
-
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <form className="form" onSubmit={searchPhotos}>
+              <Form onSubmit={searchPhotos}>
+                <label className="font15">Pesquise uma imagem 📷:</label>
+                <input type="text" id="fname" name="fname" className="font20 extraBold" placeholder={`Tente "dog" ou "apple"`} value={query} onChange={(e) => setQuery(e.target.value)}/>
+              </Form>
+              <SumbitWrapper className="flex">
+                <ButtonInput type="submit" value="Pesquisar" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+              </SumbitWrapper>
+              </form>
+            </div>
+            <h1 className="font40 extraBold" style={{ paddingTop: "40px" }}>Imagens encontradas:</h1>
       <div className="card-list">
         {pics.map((pic) => (
           <div className="card" key={pic.id}>
@@ -82,23 +73,54 @@ const Wrapper = styled.section`
   width: 100%;
   marginTop: 40px !important;
 `;
-const ServiceBoxRow = styled.div`
-  @media (max-width: 860px) {
-    flex-direction: column;
-  }
-`;
-const ServiceBoxWrapper = styled.div`
-  width: 20%;
-  margin-right: 5%;
-  padding: 80px 0;
-  @media (max-width: 860px) {
-    width: 100%;
-    text-align: center;
-    padding: 40px 0;
-  }
-`;
+
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;
+  }
+`;
+
+const Form = styled.form`
+  padding: 70px 0 30px 0;
+  input,
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid #707070;
+    height: 30px;
+    margin-bottom: 30px;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  @media (max-width: 860px) {
+    padding: 30px 0;
+  }
+`;
+
+const ButtonInput = styled.input`
+  border: 1px solid #7620ff;
+  background-color: #7620ff;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  color: #fff;
+  :hover {
+    background-color: #580cd2;
+    border: 1px solid #7620ff;
+    color: #fff;
+  }
+  @media (max-width: 991px) {
+    margin: 0 auto;
+  }
+`;
+
+const SumbitWrapper = styled.div`
+  @media (max-width: 991px) {
+    width: 100%;
+    margin-bottom: 50px;
   }
 `;
