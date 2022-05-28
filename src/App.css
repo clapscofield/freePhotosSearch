@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     background-color: rgb(244, 244, 244);
     color: #333;
@@ -84,4 +84,4 @@
     .card-list {
         column-count: 1;
     }
-}
+} */
