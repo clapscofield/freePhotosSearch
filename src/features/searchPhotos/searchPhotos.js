@@ -40,7 +40,7 @@ export default function SearchPhotos() {
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <form className="form" onSubmit={searchPhotos}>
               <Form onSubmit={searchPhotos}>
-                <label className="font15">Pesquise uma imagem 📷:</label>
+                <label className="font15">Pesquise uma imagem:</label>
                 <input type="text" id="fname" name="fname" className="font20 extraBold" placeholder={`Tente "dog" ou "apple"`} value={query} onChange={(e) => setQuery(e.target.value)}/>
               </Form>
               <SumbitWrapper className="flex">
