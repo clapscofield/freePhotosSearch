@@ -58,7 +58,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        
+      - name: Install scripts
+        run: npm react-scripts
+        
       - name: Run the tests
         run: npm test
 
